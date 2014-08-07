@@ -8,7 +8,7 @@
 			"firstname": "Nicolas",
 			"lastname": "Mouchel",
 			"post": "Developer",
-			"avatar": "http://thecatapi.com/api/images/get",
+			"avatar": "http://lorempixel.com/400/400/people/nicolas",
 			"phone": "+3399595959",
 			"mail": "nicolas.mouchel@omnilog.fr",
 			"skill":["java"]
@@ -16,7 +16,7 @@
 			"firstname": "Éric",
 			"lastname": "Laignel",
 			"post": "CEO",
-			"avatar": "http://thecatapi.com/api/images/get",
+			"avatar": "http://lorempixel.com/400/400/people/eric",
 			"phone": "+33836656565",
 			"mail": "eric.laignel@omnilog.fr"
 		}
