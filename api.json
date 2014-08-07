@@ -1,0 +1,24 @@
+{
+	"skills":[{
+		"key": "java",
+		"name": "Java"
+	}],
+	"buddies":[
+		{
+			"firstname": "Nicolas",
+			"lastname": "Mouchel",
+			"post": "Developer",
+			"avatar": "http://thecatapi.com/api/images/get",
+			"phone": "+3399595959",
+			"mail": "nicolas.mouchel@omnilog.fr",
+			"skill":["java"]
+		},{
+			"firstname": "Éric",
+			"lastname": "Laignel",
+			"post": "CEO",
+			"avatar": "http://thecatapi.com/api/images/get",
+			"phone": "+33836656565",
+			"mail": "eric.laignel@omnilog.fr"
+		}
+	]
+}
