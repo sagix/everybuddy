@@ -21,12 +21,12 @@ http.createServer(function(req, res) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
             res.write('404 Not Found\n');
             res.end();
-        }
-        var mimeType = mimeTypes[path.extname(filename).split(".")[1]];
-        res.writeHead(200, mimeType);
+        }else{
+			var mimeType = mimeTypes[path.extname(filename).split(".")[1]];
+			res.writeHead(200, mimeType);
 
-        var fileStream = fs.createReadStream(filename);
-        fileStream.pipe(res);
-
+			var fileStream = fs.createReadStream(filename);
+			fileStream.pipe(res);
+		}
     }); //end path.exists
 }).listen(1337);

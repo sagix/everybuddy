@@ -5,20 +5,48 @@
 	}],
 	"buddies":[
 		{
-			"firstname": "Nicolas",
-			"lastname": "Mouchel",
+			"firstname": "Neils",
+			"lastname": "Marche",
 			"post": "Developer",
 			"avatar": "http://lorempixel.com/400/400/people/nicolas",
 			"phone": "+3399595959",
-			"mail": "nicolas.mouchel@omnilog.fr",
+			"mail": "neils.marche@api.test",
 			"skill":["java"]
 		},{
 			"firstname": "Éric",
-			"lastname": "Laignel",
+			"lastname": "Super",
 			"post": "CEO",
 			"avatar": "http://lorempixel.com/400/400/people/eric",
 			"phone": "+33836656565",
-			"mail": "eric.laignel@omnilog.fr"
+			"mail": "eric.super@api.test"
+		},{
+			"firstname": "Michel",
+			"lastname": "Mega",
+			"post": "CTO",
+			"avatar": "http://lorempixel.com/400/400/people/michel",
+			"phone": "+33836656565",
+			"mail": "michel.mega@api.test"
+		},{
+			"firstname": "Noël",
+			"lastname": "Ultra",
+			"post": "Lead Developer",
+			"avatar": "http://lorempixel.com/400/400/people/noel",
+			"phone": "+33836656565",
+			"mail": "noel.super@api.test"
+		},{
+			"firstname": "Marcel",
+			"lastname": "Mini",
+			"post": "Developer",
+			"avatar": "http://lorempixel.com/400/400/people/marcel",
+			"phone": "+33836656565",
+			"mail": "marcel.super@api.test"
+		},{
+			"firstname": "Charles",
+			"lastname": "Super",
+			"post": "Developer",
+			"avatar": "http://lorempixel.com/400/400/people/charles",
+			"phone": "+33836656565",
+			"mail": "charles.super@api.test"
 		}
 	]
 }
