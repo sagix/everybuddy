@@ -3,6 +3,16 @@
 		"key": "java",
 		"name": "Java"
 	}],
+	"missions":[{
+		"key": "monde",
+		"name": "Le Monde"
+	},{
+		"key": "bt",
+		"name": "Bouygues Telecom"
+	},{
+		"key": "eurosport",
+		"name": "Eurosport"
+	}],
 	"buddies":[
 		{
 			"firstname": "Neils",
@@ -11,7 +21,24 @@
 			"avatar": "http://lorempixel.com/400/400/people/nicolas",
 			"phone": "+3399595959",
 			"mail": "neils.marche@api.test",
-			"skill":["java"]
+			"skills":["java"],
+			"missions":[
+				{
+					"key":"eurosport",
+					"start":"2013-05-01",
+					"end":"2013-07-01"
+				},
+				{
+					"key":"bt",
+					"start":"2013-07-01",
+					"end":"2014-03-01"
+				},
+				{
+					"key":"monde",
+					"start":"2014-03-01",
+					"end":null
+				}
+			]
 		},{
 			"firstname": "Éric",
 			"lastname": "Super",

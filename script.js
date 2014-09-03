@@ -1,11 +1,12 @@
 (function(){
     "use strict";
+    var json;
 
     var xmlhttp=new XMLHttpRequest();
     xmlhttp.onreadystatechange=function(){
       if (xmlhttp.readyState==4 && xmlhttp.status==200)
       {
-        var json = JSON.parse(xmlhttp.responseText);
+        json = JSON.parse(xmlhttp.responseText);
         populateList(json);
         document.getElementById('loader').style.display = 'none';
 
@@ -64,6 +65,30 @@
         return element;
     }
 
+    function getSkill(id){
+        var skill;
+
+        json.skills.forEach(function(data){
+            if(data.key === id){
+                skill = data;
+            }
+        });
+
+        return skill;
+    }
+
+    function getMission(id){
+        var mission;
+
+        json.missions.forEach(function(data){
+            if(data.key === id){
+                mission = data;
+            }
+        });
+
+        return mission;
+    }
+
     function onClickBuddy(event, buddy){
         
         var img = detail.getElementsByClassName('dt_img')[0];
@@ -71,6 +96,8 @@
         var post = detail.getElementsByClassName('dt_post')[0];
         var phone = detail.getElementsByClassName('dt_phone')[0];
         var mail = detail.getElementsByClassName('dt_mail')[0];
+        var list_skills = detail.getElementsByClassName('dt_list_skills')[0];
+        var list_missions = detail.getElementsByClassName('dt_list_missions')[0];
 
         img.src = buddy.avatar;
         fullname.innerText = buddy.firstname + ' ' + buddy.lastname;
@@ -79,6 +106,29 @@
         phone.href = 'tel:' + buddy.phone;
         mail.innerText = buddy.mail;
         mail.href = 'mailto:' + buddy.mail + '(' + buddy.firstname + '%20' + buddy.lastname + ')';
+
+        var f_skills = document.createDocumentFragment();
+
+        if(buddy.skills !== undefined){
+            buddy.skills.forEach(function(skill_id){
+                var li = createElement('li', '');
+                var skill = getSkill(skill_id);
+                li.innerText = skill.name;
+                f_skills.appendChild(li);
+            });
+        }
+        var f_missions = document.createDocumentFragment();
+        if(buddy.missions !== undefined){
+            buddy.missions.forEach(function(mission_desc){
+                var li = createElement('li', '');
+                var mission = getMission(mission_desc.key);
+                li.innerText = mission.name;
+                f_missions.appendChild(li);
+            });
+        }
+
+        list_skills.appendChild(f_skills);
+        list_missions.appendChild(f_missions);
 
         bt_back.classList.add('bt_visible');
         detail.classList.remove('detail_empty');
